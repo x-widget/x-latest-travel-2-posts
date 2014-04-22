@@ -1,10 +1,4 @@
 <?php
-/*******
-**This widget should use board skin x-board-travel-3 
-**for product name and product price
-********/
-
-
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
@@ -17,9 +11,6 @@ $file_headers = @get_headers($icon_url);
 if($file_headers[0] == 'HTTP/1.1 404 Not Found') {
     $icon_url = x::url()."/widget/".$widget_config['name']."/img/2paperswhite.png";
 }
-
-if( $widget_config['title'] ) $title = $widget_config['title'];
-else $title = 'no title';
 
 if( $widget_config['forum1'] ) $_bo_table = $widget_config['forum1'];
 else $_bo_table = $widget_config['default_forum_id'];
