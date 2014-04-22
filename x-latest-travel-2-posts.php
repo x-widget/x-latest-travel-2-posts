@@ -55,7 +55,7 @@ $title = cut_str(db::result( $title_query ),10,"...");
 			$no_of_posts = count($list);
 			foreach ( $list as $li ) {
 				$subject = $li['subject'];
-				$url = $li['href'];
+				$url = $li['url'];
 				$no_comment = '';
 				if ( !$comment_count = strip_tags($li['comment_cnt']) ) {
 					$comment_count = 0;
